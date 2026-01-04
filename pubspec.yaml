@@ -1,0 +1,61 @@
+name: eyespeak
+description: AI-powered assistive application for visually impaired individuals
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI & Icons
+  cupertino_icons: ^1.0.2
+  
+  # AI & ML
+  tflite_flutter: ^0.12.1
+  camera: ^0.11.3
+  image: ^4.1.3
+  
+  # Speech
+  speech_to_text: ^7.3.0
+  flutter_tts: ^4.2.3
+  
+  # HTTP & API
+  http: ^1.1.0
+  # ADD THESE NEW DEPENDENCIES
+  google_mlkit_image_labeling: ^0.12.0
+  google_mlkit_object_detection: ^0.12.0
+  image_picker: ^1.0.4
+  # Storage & State
+  shared_preferences: ^2.2.2
+  provider: ^6.1.1
+  
+  # Permissions
+  permission_handler: ^12.0.1
+  
+  # Utils
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  vibration: ^3.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/models/model.tflite
+    - assets/models/labels.txt
+    - assets/images/
+  
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Bold.ttf
+          weight: 700
